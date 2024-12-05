@@ -146,5 +146,10 @@ Após carregar todas as planilhas deste diretório, teremos a seguinte estrutura
     ![alt](images/011l.png)
 
 
+## Modelagem de Dados
 
+A modelagem de dados é igual a modelagem de um banco de dados. Não tenho muito o que explicar, vou colocar a imagem abaixo caso eu queira lembrar de algum detalhe no futuro.
+
+  ![alt](images/012.png)
+  
 
