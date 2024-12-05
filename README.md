@@ -101,5 +101,50 @@ Após carregar todas as planilhas deste diretório, teremos a seguinte estrutura
 
   ![alt](images/010.png)
 
+### Importar arquivos semelhantes automaticamente
+
+- Agora vamos adicionar os arquivos do diretório Fato, onde temos 3 planilhas com a mesma estrutura, porém cada uma possui dados relativos a um período de tempo. Vamos entender como automatizar essa importação.
+
+  ![alt](images/011a.png)
+  ![alt](images/011b.png)
+
+- Vamos clicar em Transformar dados porque existem transformações necessárias antes de podermos combinar os arquivos.
+
+  ![alt](images/011c.png)
+
+- Conforme formos adicionando novas planilhas nessa pasta, se elas seguirem o padrão de nomeclatura e possuir as mesmas colunas, então elas serão importadas automaticamente.
+
+    ![alt](images/011d.png)
+
+- A única coluna necessária para mesclarmos as 3 planilhas e outras que podem ser adicionadas no futuro, é a coluna Content, então podemos excluir as demais.
+
+    ![alt](images/011e.png)
+
+- Em seguida, iremos clicar no ícone de 2 setas para baixo ao lado do nome da coluna. Repare que na visualização existem tratativas necessárias nos arquivos.
+
+    ![alt](images/011f.png)
+
+- No arquivo exemplo iremos remover os cabeçarios promovidos automaticamente e excluir as 4 primeiras linhas. Essa remoção não afeta o arquivo original, altera apenas o arquivo concatenado presente no Power BI.
+
+    ![alt](images/011g.png)
+
+- Como os arquivos importados são planilhas e não tabelas, devemos remover as linhas vazias.
+
+  ![alt](images/011h.png)   
+
+- Em seguida iremos promover a primeira linha como cabeçalho.
+
+    ![alt](images/011i.png)
+
+- A tabela concatenada irá apresentar erros porque ela está tentando procurar as linhas e colunas que excluímos, para solucionar, basta remover a etapa de tipo alterado, como na imagem abaixo.
+
+    ![alt](images/011j.png)
+
+- Ficará assim: 
+
+    ![alt](images/011k.png)
+    ![alt](images/011l.png)
+
+
 
 
