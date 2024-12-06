@@ -151,5 +151,46 @@ Após carregar todas as planilhas deste diretório, teremos a seguinte estrutura
 A modelagem de dados é igual a modelagem de um banco de dados. Não tenho muito o que explicar, vou colocar a imagem abaixo caso eu queira lembrar de algum detalhe no futuro.
 
   ![alt](images/012.png)
-  
 
+
+## Criar Tabela Calendário
+
+- Para criar uma nova tabela, faça: 
+
+  ![alt](images/014a.png)
+
+- A função CALENDARAUTO() descobre a menor e a maior data entre todas as planilhas e recupera todas as datas entre elas. Essa função se autoincrementa sozinha, então se for adicionada uma nova data, ela será reconhecida e a função recalculada automaticamente.
+
+  ![alt](images/014b.png)
+
+- Criar outras colunas.
+
+  ![alt](images/014c.png)
+
+- Função YEAR() recupera o ano de uma data
+  
+  ![alt](images/014d.png)
+
+- Função MONTH() recupera o número do mês de uma data. Repare que a data está na mesma tabela que a coluna criada, então ela pode ser chamada apenas utilizando [nome da coluna], sem precisar indicar em qual tabela a coluna está.
+  
+  ![alt](images/014e.png)
+
+- Função FORMAT() Converte um texto em um formato especificado. No exemplo recupera o nome do mês.
+  
+  ![alt](images/014f.png)
+
+- Função DAY() recupera o número do dia de uma data.
+  
+  ![alt](images/014g.png)
+
+- Função FORMAT() Converte um texto em um formato especificado. No exemplo recupera o nome do dia.
+  
+  ![alt](images/014h.png)
+
+- Por questões de boa prática é recomendável marcar a tabela como tabela de data.
+  
+  ![alt](images/014i.png)
+
+- Por útimo, criamos um relacionamento entre a tabela fato (data venda) e a tabela calendário(data).
+  
+  ![alt](images/014j.png)
