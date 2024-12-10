@@ -194,3 +194,23 @@ A modelagem de dados é igual a modelagem de um banco de dados. Não tenho muito
 - Por útimo, criamos um relacionamento entre a tabela fato (data venda) e a tabela calendário(data).
   
   ![alt](images/014j.png)
+
+## Medidas
+
+Para fazer cálculos, sempre devemos utilizar medidas, mesmo que existam colunas com valor total, por questões de performace é melhor usar uma medida.
+
+  ![alt](images/015a.png)
+
+
+### Medida de soma
+
+  ![alt](images/015b.png)
+  ![alt](images/015c.png)
+
+### Medida de contar linhas da tabela
+
+  ![alt](images/015d.png)
+
+### Medida de média de qtde. vendidas
+
+  ![alt](images/015e.png)
