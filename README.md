@@ -214,3 +214,9 @@ Para fazer cálculos, sempre devemos utilizar medidas, mesmo que existam colunas
 ### Medida de média de qtde. vendidas
 
   ![alt](images/015e.png)
+
+## Função Related
+
+Se parece com o procx do Excel, mas no Power BI, é necessário que as duas tabelas tenha um relacionamento para poder utilizar essa função.
+
+  ![alt](images/016.png)
