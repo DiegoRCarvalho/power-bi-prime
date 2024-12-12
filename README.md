@@ -221,15 +221,77 @@ Se parece com o procx do Excel, mas no Power BI, é necessário que as duas tabe
 
   ![alt](images/016.png)
 
-## Função Interadora
+## Função Iteradora
 
-Permite obter o total através de um cálculo sobre outras colunas, **realizando o cálculo linha a linha**. As funções interadoras terminam com um X no final do nome.
+Permite obter o total através de um cálculo sobre outras colunas, **realizando o cálculo linha a linha**. As funções iteradoras terminam com um X no final do nome.
 
 - Neste exemplo vemos porque não podemos apenas multiplicar uma coluna pela outra.
   ![alt](images/017a.png)
 
-- O mesmo exemplo anterior, mas agora usando a função interadora SUMX.
+- O mesmo exemplo anterior, mas agora usando a função iteradora SUMX.
   ![alt](images/017b.png)
 
-- O mesmo exemplo anterior, mas agora obtendo a média através da função interadora AVERAGEX.
+- O mesmo exemplo anterior, mas agora obtendo a média através da função iteradora AVERAGEX.
   ![alt](images/017c.png)
+
+## Mínimo e Máximo
+
+- No exemplo abaixo vemos que as funções MIN e MAX retornaram apenas o menor e o maior valor da tabela e não o mínimo e máximo de cada marca.
+
+  ![alt](images/018a.png)
+
+- A solução para esse caso é aplicar uma segmentação de dados.
+  ![alt](images/018b.png)
+
+
+## Descobrir Lucro / Margem
+
+1. Vamos descobrir o valor bruto vendido e se existem descontos nas vendas
+
+  - Para descobrir o valor bruto vendido, criamos uma medida combinando as funções SUMX e RELATED, para obtermos a Qtde que está na fato_vendas e multiplicar esse valor por Preco_Unitario que está na tabela dim_produto. Lembrando que a função RELATED só funciona se existir um relacionamento entre as duas tabelas.
+
+    ![alt](images/019a.png)
+
+  - A tabela fato vendas já possui um campo valor total, então teoricamente chegaríamos ao mesmo resultado anterior, apenas somando os valores dessa coluna.
+
+    ![alt](images/019b.png)
+
+  - Quando comparamos as colunas Faturamento Bruto e Venda Total, percebemos que existem diferenças de valores, isso aconteceu propositalmente, apenas para exemplificar uma situação que costuma acontecer na vida real, onde responsável pela planilha não informou que a coluna Valor Total na verdade utiliza o valor com o desconto da venda e não o valor real do produto.
+
+    ![alt](images/019c.png)
+
+  - Agora que já sabemos o valor bruto e o valor com o desconto, conseguimos exibir o desconto.
+
+    ![alt](images/019d.png)
+
+2. Descontar tributos e custos
+
+  - Essa informação está presente na tabela dim_produto.
+
+    ![alt](images/019e.png)
+
+  - Para trazermos essas duas medidas para o nosso exemplo iremos utilizar a combinação das funções SUMX e RELATED igual fizemos para descobrir o valor bruto vendido.
+
+    ![alt](images/019f.png)
+
+    ![alt](images/019g.png)
+
+3. Resultado
+
+    ![alt](images/019h.png)
+
+  - Quantida: Qtd. de produtos vendidos.
+
+  - Faturamento Bruto: Qtd de produtos vendidos multiplicado pelo preço unitário dos produtos.
+
+  - Desconto: Desconto fornecido ao cliente durante a venda.
+
+  - Receita Bruta: Qtd de produtos vendidos multiplicado pelo preço unitário com os descontos dos produtos. Nesse exemplo esse dado está contido na coluna Venda Total da tabela fato_vendas.
+
+  - Tributos: Total pago em impostos
+
+  - Receita Líquida: É obtida através da subtração da Receita Bruta pelos tributos.
+
+  - Custos: Valor gasto com insumos, etc.
+
+  - Lucro / Margem:  É obtida através da subtração da Receita Líquida pelos Custos.
