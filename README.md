@@ -220,3 +220,16 @@ Para fazer cálculos, sempre devemos utilizar medidas, mesmo que existam colunas
 Se parece com o procx do Excel, mas no Power BI, é necessário que as duas tabelas tenha um relacionamento para poder utilizar essa função.
 
   ![alt](images/016.png)
+
+## Função Interadora
+
+Permite obter o total através de um cálculo sobre outras colunas, **realizando o cálculo linha a linha**. As funções interadoras terminam com um X no final do nome.
+
+- Neste exemplo vemos porque não podemos apenas multiplicar uma coluna pela outra.
+  ![alt](images/017a.png)
+
+- O mesmo exemplo anterior, mas agora usando a função interadora SUMX.
+  ![alt](images/017b.png)
+
+- O mesmo exemplo anterior, mas agora obtendo a média através da função interadora AVERAGEX.
+  ![alt](images/017c.png)
